@@ -1,0 +1,16 @@
+extends ../layouts/base
+
+block contenido
+    .contenido-principal
+        h1 #{title}
+        //- if errores.length
+        //-     each error in errores
+        //-         .alert= error
+        if error
+            .alerta= error
+        form(class="agregar-proyecto" action=url method="POST")
+            div.campo
+                label(for="name") Nombre Proyecto: 
+                input#name(type="text" name="name" placeholder="Nombre Proyecto" required)
+            div.campo.enviar
+                input(type="submit" value="Agregar" class="boton")

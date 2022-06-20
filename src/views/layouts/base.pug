@@ -1,0 +1,48 @@
+- let url = protocol + "://" + host + "/nuevo-proyecto"
+//- - url = 'https://example.com/'
+//- button(type='button' class='btn btn-' + btnType + ' btn-' + btnSize)
+//- button(type='button' class=`btn btn-${btnType} btn-${btnSize}`)
+
+//- div(escaped="<code>")
+//- div(unescaped!="<code>")
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/normalize.css")
+        link(rel="stylesheet", href="/css/app.css")
+        title #{title} &#8211; UPTASKS
+        //- title= title
+        <meta name="description" content="#{description}">
+        //- title #{nombrePagina}
+    body 
+        //- p= "Hola, mi nombre es " + name + ", tengo " + age + " años y vivo en " + address
+        //- p Hola, mi nombre es #{name}, tengo #{age} años y vivo en #{address}
+        header.barra
+            h1 UpTask - Administrador de Proyectos 
+            a(href="") Cerrar Sesión 
+        
+        main.contenedor
+            aside.contenedor-proyectos
+                .panel.crear-proyecto 
+                    a(href=url class="boton") Nuevo Proyecto
+                        span +
+                .panel.lista-proyectos
+                    h2 Proyectos
+                    ul#proyectos.proyectos
+                        li
+                            a(href="") Diseño de Tienda Virtual 
+                        li
+                            a(href="") Diseño de Nuevo Blog 
+                        li
+                            a(href="") Diseño de Logotipo
+            block contenido
+    script(src="/js/index.js")
+
+
+       
+
+    //- Aqui puedes poner mas bloques
